@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "886c3159-a015-4fb7-8a7b-0f10bb6ea62b",
-		"name": "SrividyaTeam10UserControllerCollectionRevised1",
+		"_postman_id": "ca48778d-2b64-4791-8ecf-2896f92349db",
+		"name": "SrividyaTeam10UserControllerCollectionRevised1 Copy 2",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "20373048"
 	},
@@ -1152,6 +1152,7 @@
 				"exec": [
 					"pm.environment.set(\"username\", \"Numpy@gmail.com\");",
 					"pm.environment.set(\"password\", \"userapi@2025\");",
+					"pm.environment.set(\"testmerge\", \"testmerge\");",
 					"",
 					"if (pm.iterationData.has(\"endpoint\")) {",
 					"    pm.collectionVariables.set(\"endpoint\",pm.iterationData.get(\"endpoint\"));",
