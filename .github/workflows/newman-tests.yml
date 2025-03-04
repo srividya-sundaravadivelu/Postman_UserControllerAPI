@@ -1,1 +1,42 @@
-# Workflow file
+name: Run Newman Tests
+
+on:
+  push:
+    branches:
+      - master  
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  run-newman-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install Newman & Reporters
+        run: |
+          npm install -g newman
+          npm install -g newman-reporter-htmlextra
+
+      - name: Run Postman Collection
+        run: |
+          newman run "SrividyaTeam10UserControllerCollectionRevised1.postman_collection.json" \
+            --environment "UserControllerAPIEnvironment.json" \
+            --iteration-data "User_Data_Postman.csv" \
+            --reporters cli,htmlextra \
+            --reporter-htmlextra-export newman-report.html
+
+      - name: Upload HTML Report
+        uses: actions/upload-artifact@v2
+        with:
+          name: newman-html-report
+          path: newman-report.html
+
