@@ -1,6 +1,6 @@
 {
-	"id": "d14e8b1f-a426-405e-9271-07c2ed109f3c",
-	"name": "User Controller API Environment",
+	"id": "cb36700d-668b-48e7-a635-077c10203bc5",
+	"name": "User Controller API Environment Copy",
 	"values": [
 		{
 			"key": "baseUrl",
@@ -19,9 +19,15 @@
 			"value": "",
 			"type": "any",
 			"enabled": true
+		},
+		{
+			"key": "testmerge",
+			"value": "",
+			"type": "default",
+			"enabled": true
 		}
 	],
 	"_postman_variable_scope": "environment",
-	"_postman_exported_at": "2025-03-04T00:14:51.543Z",
-	"_postman_exported_using": "Postman/11.32.3"
+	"_postman_exported_at": "2025-03-04T17:15:08.579Z",
+	"_postman_exported_using": "Postman/11.35.0"
 }
